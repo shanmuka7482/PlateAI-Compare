@@ -1,0 +1,1287 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+      <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+       <link href="{{fontLink}}" rel="stylesheet">
+       <link href="{{secondaryFontLink}}" rel="stylesheet">
+      
+      <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      
+      <!-- Header Scripts -->
+      <script id="header-scripts">
+        // This script tag will be replaced with actual scripts.head content
+        if (window.scripts && window.scripts.head) {
+          document.getElementById('header-scripts').outerHTML = window.scripts.head;
+        }
+      </script>
+
+      <!-- Preconnect -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Font stylesheet -->
+
+      <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  DEFAULT: '{{settings.colors.primary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8', 
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  DEFAULT: '{{settings.colors.secondary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3', 
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  DEFAULT: '{{settings.colors.accent}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3', 
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['{{settings.fonts.primary}}', 'Roboto', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['{{settings.fonts.secondary}}', 'system-ui', 'sans-serif'],
+                body: ['{{settings.fonts.secondary}}', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      });
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+
+      
+      <link rel="icon" type="image/x-icon" href="{{settings.favicon}}">
+      
+      <style>
+        h1, h2, h3, h4, h5, h6 {
+          font-family: {{settings.fonts.primary}}, system-ui, sans-serif;
+        }
+        }
+        body {
+          font-family: {{settings.fonts.secondary}}, system-ui, sans-serif;
+      </style>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative h-full">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="bcdc115c-a8cd-4428-8c65-05db2bc62d0f" data-section-id="bcdc115c-a8cd-4428-8c65-05db2bc62d0f">
+
+
+<div id="root">
+    <header id="header" class="bg-neutral-900 relative">
+        <nav class="px-4 py-3 flex justify-between items-center max-w-7xl mx-auto">
+            <div class="text-2xl font-bold text-white font-['Space_Grotesk']">
+                PlateAI Compare
+            </div>
+
+            <div class="hidden md:flex space-x-6">
+                <a href="/" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    Home
+                </a>
+                <a href="#features" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    Features
+                </a>
+                <a href="#demo" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    Demo
+                </a>
+                <a href="#comparison" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    Comparison
+                </a>
+                <a href="#technical" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    Technical
+                </a>
+                <a href="#performance" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    Performance
+                </a>
+                <a href="#faq" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    FAQ
+                </a>
+                <a href="#contact" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    Contact
+                </a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-neutral-800 animate__animated animate__fadeIn">
+            <div class="px-4 py-3 space-y-3">
+                <a href="/" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    Home
+                </a>
+                <a href="#features" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    Features
+                </a>
+                <a href="#demo" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    Demo
+                </a>
+                <a href="#comparison" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    Comparison
+                </a>
+                <a href="#technical" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    Technical
+                </a>
+                <a href="#performance" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    Performance
+                </a>
+                <a href="#faq" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    FAQ
+                </a>
+                <a href="#contact" class="block text-gray-300 hover:text-indigo-400 transition-colors duration-300 font-['Inter']">
+                    Contact
+                </a>
+            </div>
+        </div>
+
+        <div class="px-4 py-20 max-w-7xl mx-auto min-h-[70vh] flex items-center">
+            <div class="w-full md:w-1/2 animate__animated animate__fadeInLeft">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 font-['Space_Grotesk']">
+                    Compare AI License Plate Recognition Models
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 font-['Inter']">
+                    Upload an image and see how two different AI models analyze vehicle license plates in real-time.
+                </p>
+                <a href="#demo" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors duration-300 font-['Inter']">
+                    Try Demo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('animate__fadeIn');
+            } else {
+                mobileMenu.classList.add('animate__fadeOut');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('animate__fadeOut');
+                }, 500);
+            }
+        });
+    </script>
+</div>
+</element><element id="2ded8373-9a50-4bd5-9876-6261cfc9a112" data-section-id="2ded8373-9a50-4bd5-9876-6261cfc9a112">
+
+
+<div id="root">
+    <section id="hero" class="bg-neutral-900 py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2 animate__animated animate__fadeInLeft">
+                    <div class="bg-neutral-800/50 p-8 rounded-2xl border border-neutral-700">
+                        <div class="mb-6">
+                            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 font-['Space_Grotesk']">
+                                Upload & Compare License Plate Analysis
+                            </h2>
+                            <p class="text-gray-300 text-lg font-['Inter']">
+                                See how our dual AI models perform in real-time license plate recognition
+                            </p>
+                        </div>
+
+                        <div id="upload-zone" class="border-2 border-dashed border-indigo-500/30 rounded-lg p-8 text-center hover:border-indigo-500 transition-colors duration-300 cursor-pointer">
+                            <div class="mb-4">
+                                <svg class="w-12 h-12 mx-auto text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-300 mb-2 font-['Inter']">Drag and drop your image here</p>
+                            <p class="text-gray-400 text-sm font-['Inter']">or click to browse files</p>
+                            <input type="file" id="file-upload" class="hidden" accept="image/*" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 animate__animated animate__fadeInRight">
+                    <div class="bg-neutral-800/50 p-8 rounded-2xl border border-neutral-700">
+                        <div class="flex justify-between mb-6">
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                    <span class="text-gray-300 font-['Inter']">Models Ready</span>
+                                </div>
+                                <h3 class="text-xl text-white font-['Space_Grotesk']">Real-time Analysis</h3>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-gray-400 text-sm font-['Inter']">Processing Time</span>
+                                <div class="text-indigo-400 font-mono">~0.5s</div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-neutral-700/30 p-4 rounded-lg">
+                                <h4 class="text-white mb-2 font-['Space_Grotesk']">Model A</h4>
+                                <div class="text-gray-400 text-sm font-['Inter']">Awaiting image...</div>
+                            </div>
+                            <div class="bg-neutral-700/30 p-4 rounded-lg">
+                                <h4 class="text-white mb-2 font-['Space_Grotesk']">Model B</h4>
+                                <div class="text-gray-400 text-sm font-['Inter']">Awaiting image...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const uploadZone = document.getElementById('upload-zone');
+        const fileUpload = document.getElementById('file-upload');
+
+        uploadZone.addEventListener('click', () => {
+            fileUpload.click();
+        });
+
+        uploadZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadZone.classList.add('border-indigo-500');
+        });
+
+        uploadZone.addEventListener('dragleave', () => {
+            uploadZone.classList.remove('border-indigo-500');
+        });
+
+        uploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadZone.classList.remove('border-indigo-500');
+            const files = e.dataTransfer.files;
+            handleFiles(files);
+        });
+
+        fileUpload.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+
+        function handleFiles(files) {
+            if (files.length > 0) {
+                const file = files[0];
+                if (file.type.startsWith('image/')) {
+                    // Handle image upload here
+                    console.log('Image selected:', file.name);
+                } else {
+                    alert('Please upload an image file');
+                }
+            }
+        }
+    </script>
+</div>
+</element><element id="0967a2a6-162c-4c05-96a5-86955bbf0998" data-section-id="0967a2a6-162c-4c05-96a5-86955bbf0998">
+
+
+<div id="root">
+    <section id="features" class="bg-neutral-800 py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold text-white mb-4 font-['Space_Grotesk']">Advanced Features</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto font-['Inter']">Powerful tools for comprehensive license plate analysis</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-700 hover:border-indigo-500 transition-all duration-300 animate__animated animate__fadeInUp">
+                    <div class="bg-indigo-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 font-['Space_Grotesk']">Drag & Drop Upload</h3>
+                    <p class="text-gray-300 font-['Inter']">Simple and intuitive image upload with drag-and-drop functionality or file browser</p>
+                </div>
+
+                <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-700 hover:border-indigo-500 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                    <div class="bg-indigo-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 font-['Space_Grotesk']">Auto Preprocessing</h3>
+                    <p class="text-gray-300 font-['Inter']">Automatic image enhancement, cropping, and resizing for optimal analysis</p>
+                </div>
+
+                <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-700 hover:border-indigo-500 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                    <div class="bg-indigo-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 font-['Space_Grotesk']">Real-time Analysis</h3>
+                    <p class="text-gray-300 font-['Inter']">Instant results from both AI models with side-by-side comparison</p>
+                </div>
+
+                <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-700 hover:border-indigo-500 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.6s">
+                    <div class="bg-indigo-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 font-['Space_Grotesk']">Model Switching</h3>
+                    <p class="text-gray-300 font-['Inter']">Easy toggle between models with detailed performance metrics</p>
+                </div>
+
+                <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-700 hover:border-indigo-500 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.8s">
+                    <div class="bg-indigo-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 font-['Space_Grotesk']">Performance Metrics</h3>
+                    <p class="text-gray-300 font-['Inter']">Detailed accuracy and performance statistics for each model</p>
+                </div>
+
+                <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-700 hover:border-indigo-500 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 1s">
+                    <div class="bg-indigo-500/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 font-['Space_Grotesk']">Customizable Settings</h3>
+                    <p class="text-gray-300 font-['Inter']">Adjust analysis parameters and visualization preferences</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</element><element id="5eeaf804-c8cd-4f8c-9957-3ffe15cd2b80" data-section-id="5eeaf804-c8cd-4f8c-9957-3ffe15cd2b80">
+
+
+<div id="root">
+    <section id="demo" class="bg-neutral-900 py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold text-white mb-4 font-['Space_Grotesk']">Live Demo</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto font-['Inter']">Test both AI models with your license plate images</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700 animate__animated animate__fadeInLeft">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-white mb-4 font-['Space_Grotesk']">Upload Image</h3>
+                        <div id="demo-upload-zone" class="border-2 border-dashed border-indigo-500/30 rounded-lg p-8 text-center hover:border-indigo-500 transition-colors duration-300 cursor-pointer">
+                            <div class="mb-4">
+                                <svg class="w-12 h-12 mx-auto text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-300 mb-2 font-['Inter']">Drag and drop your license plate image here</p>
+                            <p class="text-gray-400 text-sm font-['Inter']">or click to browse files</p>
+                            <input type="file" id="demo-file-upload" class="hidden" accept="image/*" />
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-neutral-700/30 p-4 rounded-lg">
+                            <h4 class="text-white mb-2 font-['Space_Grotesk']">Image Preprocessing</h4>
+                            <div class="flex space-x-4">
+                                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-300 font-['Inter']">Auto Enhance</button>
+                                <button class="bg-neutral-600 text-white px-4 py-2 rounded-lg hover:bg-neutral-700 transition-colors duration-300 font-['Inter']">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700 animate__animated animate__fadeInRight">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-white mb-4 font-['Space_Grotesk']">Analysis Results</h3>
+                        <div class="flex space-x-4 mb-4">
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg flex-1 hover:bg-indigo-700 transition-colors duration-300 font-['Inter']">Model A</button>
+                            <button class="bg-neutral-600 text-white px-4 py-2 rounded-lg flex-1 hover:bg-neutral-700 transition-colors duration-300 font-['Inter']">Model B</button>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-neutral-700/30 p-4 rounded-lg">
+                            <h4 class="text-white mb-2 font-['Space_Grotesk']">Detected Plate</h4>
+                            <p class="text-gray-400 font-mono text-lg">Awaiting image...</p>
+                        </div>
+
+                        <div class="bg-neutral-700/30 p-4 rounded-lg">
+                            <h4 class="text-white mb-2 font-['Space_Grotesk']">Confidence Score</h4>
+                            <div class="w-full bg-neutral-600 rounded-full h-4">
+                                <div class="bg-indigo-500 h-4 rounded-full" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="bg-neutral-700/30 p-4 rounded-lg">
+                            <h4 class="text-white mb-2 font-['Space_Grotesk']">Processing Time</h4>
+                            <p class="text-indigo-400 font-mono">0ms</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const demoUploadZone = document.getElementById('demo-upload-zone');
+        const demoFileUpload = document.getElementById('demo-file-upload');
+
+        demoUploadZone.addEventListener('click', () => {
+            demoFileUpload.click();
+        });
+
+        demoUploadZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            demoUploadZone.classList.add('border-indigo-500');
+        });
+
+        demoUploadZone.addEventListener('dragleave', () => {
+            demoUploadZone.classList.remove('border-indigo-500');
+        });
+
+        demoUploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            demoUploadZone.classList.remove('border-indigo-500');
+            const files = e.dataTransfer.files;
+            handleDemoFiles(files);
+        });
+
+        demoFileUpload.addEventListener('change', (e) => {
+            handleDemoFiles(e.target.files);
+        });
+
+        function handleDemoFiles(files) {
+            if (files.length > 0) {
+                const file = files[0];
+                if (file.type.startsWith('image/')) {
+                    // Handle image upload here
+                    console.log('Demo image selected:', file.name);
+                } else {
+                    alert('Please upload an image file');
+                }
+            }
+        }
+    </script>
+</div>
+</element><element id="ac7f5b7d-1543-47b4-831a-3ddbf6ef93c5" data-section-id="ac7f5b7d-1543-47b4-831a-3ddbf6ef93c5">
+
+
+<div id="root">
+    <section id="comparison" class="bg-neutral-800 py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold text-white mb-4 font-['Space_Grotesk']">Model Comparison</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto font-['Inter']">Detailed comparison of our two AI models' architectures and performance</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-700 animate__animated animate__fadeInLeft">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-white font-['Space_Grotesk']">Model A</h3>
+                        <span class="bg-indigo-500/10 text-indigo-400 px-3 py-1 rounded-full text-sm font-['Inter']">Primary Model</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300 font-['Inter']">Architecture</span>
+                            <span class="text-white font-['Inter']">CNN + Transformer</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300 font-['Inter']">Dataset Size</span>
+                            <span class="text-white font-['Inter']">1.2M images</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300 font-['Inter']">Accuracy</span>
+                            <span class="text-white font-['Inter']">98.5%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300 font-['Inter']">Inference Time</span>
+                            <span class="text-white font-['Inter']">0.3s</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-700 animate__animated animate__fadeInRight">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-white font-['Space_Grotesk']">Model B</h3>
+                        <span class="bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-sm font-['Inter']">Experimental</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300 font-['Inter']">Architecture</span>
+                            <span class="text-white font-['Inter']">YOLO + OCR</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300 font-['Inter']">Dataset Size</span>
+                            <span class="text-white font-['Inter']">800K images</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300 font-['Inter']">Accuracy</span>
+                            <span class="text-white font-['Inter']">97.2%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300 font-['Inter']">Inference Time</span>
+                            <span class="text-white font-['Inter']">0.5s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-700 animate__animated animate__fadeInUp">
+                <h3 class="text-xl font-bold text-white mb-6 font-['Space_Grotesk']">Performance Comparison</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-neutral-700">
+                                <th class="text-left p-4 text-gray-300 font-['Inter']">Metric</th>
+                                <th class="text-center p-4 text-indigo-400 font-['Inter']">Model A</th>
+                                <th class="text-center p-4 text-green-400 font-['Inter']">Model B</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-neutral-700">
+                                <td class="p-4 text-gray-300 font-['Inter']">Character Recognition</td>
+                                <td class="p-4 text-center text-white font-['Inter']">99.1%</td>
+                                <td class="p-4 text-center text-white font-['Inter']">98.3%</td>
+                            </tr>
+                            <tr class="border-b border-neutral-700">
+                                <td class="p-4 text-gray-300 font-['Inter']">Plate Detection</td>
+                                <td class="p-4 text-center text-white font-['Inter']">98.5%</td>
+                                <td class="p-4 text-center text-white font-['Inter']">99.2%</td>
+                            </tr>
+                            <tr class="border-b border-neutral-700">
+                                <td class="p-4 text-gray-300 font-['Inter']">Low Light Performance</td>
+                                <td class="p-4 text-center text-white font-['Inter']">96.7%</td>
+                                <td class="p-4 text-center text-white font-['Inter']">94.5%</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 text-gray-300 font-['Inter']">Processing Speed</td>
+                                <td class="p-4 text-center text-white font-['Inter']">0.3s</td>
+                                <td class="p-4 text-center text-white font-['Inter']">0.5s</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</element><element id="747819de-4cb4-4334-a554-2d9f5a930a94" data-section-id="747819de-4cb4-4334-a554-2d9f5a930a94">
+
+
+<div id="root">
+    <section id="technical" class="bg-neutral-900 py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold text-white mb-4 font-['Space_Grotesk']">Technical Details</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto font-['Inter']">Under the hood of our AI-powered license plate recognition system</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-8 animate__animated animate__fadeInLeft">
+                    <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700">
+                        <h3 class="text-xl font-bold text-white mb-4 font-['Space_Grotesk']">
+                            <span class="bg-indigo-500/10 text-indigo-400 px-3 py-1 rounded-full text-sm mr-2">01</span>
+                            Architecture
+                        </h3>
+                        <ul class="space-y-3 text-gray-300 font-['Inter']">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Neural network backbone: ResNet50 + Custom CNN layers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Advanced OCR with attention mechanism</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Multi-stage detection pipeline</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700">
+                        <h3 class="text-xl font-bold text-white mb-4 font-['Space_Grotesk']">
+                            <span class="bg-indigo-500/10 text-indigo-400 px-3 py-1 rounded-full text-sm mr-2">02</span>
+                            Training
+                        </h3>
+                        <ul class="space-y-3 text-gray-300 font-['Inter']">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>2M+ training images from diverse sources</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Advanced data augmentation techniques</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Mixed precision training with CUDA optimization</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="space-y-8 animate__animated animate__fadeInRight">
+                    <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700">
+                        <h3 class="text-xl font-bold text-white mb-4 font-['Space_Grotesk']">
+                            <span class="bg-indigo-500/10 text-indigo-400 px-3 py-1 rounded-full text-sm mr-2">03</span>
+                            Preprocessing
+                        </h3>
+                        <ul class="space-y-3 text-gray-300 font-['Inter']">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Adaptive image enhancement algorithms</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Smart cropping with plate localization</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Real-time image optimization</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-neutral-800 p-6 rounded-xl border border-neutral-700">
+                        <h3 class="text-xl font-bold text-white mb-4 font-['Space_Grotesk']">
+                            <span class="bg-indigo-500/10 text-indigo-400 px-3 py-1 rounded-full text-sm mr-2">04</span>
+                            Deployment
+                        </h3>
+                        <ul class="space-y-3 text-gray-300 font-['Inter']">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Containerized microservices architecture</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Load-balanced API endpoints</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Automated scaling and failover</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</element><element id="52c44d56-ee20-4c6b-b9a6-219ca8d425c8" data-section-id="52c44d56-ee20-4c6b-b9a6-219ca8d425c8">
+
+<div id="root">
+    <section id="performance" class="bg-neutral-800 py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold text-white mb-4 font-['Space_Grotesk']">Performance Metrics</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto font-['Inter']">Real-world performance analysis of our AI models</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-700 animate__animated animate__fadeInUp">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="relative w-32 h-32">
+                            <svg class="transform -rotate-90 w-32 h-32">
+                                <circle
+                                    cx="64"
+                                    cy="64"
+                                    r="56"
+                                    stroke="currentColor"
+                                    stroke-width="8"
+                                    fill="transparent"
+                                    class="text-neutral-700"
+                                />
+                                <circle
+                                    cx="64"
+                                    cy="64"
+                                    r="56"
+                                    stroke="currentColor"
+                                    stroke-width="8"
+                                    fill="transparent"
+                                    stroke-dasharray="352"
+                                    stroke-dashoffset="35.2"
+                                    class="text-indigo-500"
+                                />
+                            </svg>
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-white">90%</div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white text-center mb-2 font-['Space_Grotesk']">Accuracy</h3>
+                    <p class="text-gray-300 text-center font-['Inter']">Average recognition rate</p>
+                </div>
+
+                <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-700 animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="relative w-32 h-32">
+                            <svg class="transform -rotate-90 w-32 h-32">
+                                <circle
+                                    cx="64"
+                                    cy="64"
+                                    r="56"
+                                    stroke="currentColor"
+                                    stroke-width="8"
+                                    fill="transparent"
+                                    class="text-neutral-700"
+                                />
+                                <circle
+                                    cx="64"
+                                    cy="64"
+                                    r="56"
+                                    stroke="currentColor"
+                                    stroke-width="8"
+                                    fill="transparent"
+                                    stroke-dasharray="352"
+                                    stroke-dashoffset="70.4"
+                                    class="text-indigo-500"
+                                />
+                            </svg>
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-white">80%</div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white text-center mb-2 font-['Space_Grotesk']">Speed</h3>
+                    <p class="text-gray-300 text-center font-['Inter']">Processing efficiency</p>
+                </div>
+
+                <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-700 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="relative w-32 h-32">
+                            <svg class="transform -rotate-90 w-32 h-32">
+                                <circle
+                                    cx="64"
+                                    cy="64"
+                                    r="56"
+                                    stroke="currentColor"
+                                    stroke-width="8"
+                                    fill="transparent"
+                                    class="text-neutral-700"
+                                />
+                                <circle
+                                    cx="64"
+                                    cy="64"
+                                    r="56"
+                                    stroke="currentColor"
+                                    stroke-width="8"
+                                    fill="transparent"
+                                    stroke-dasharray="352"
+                                    stroke-dashoffset="88"
+                                    class="text-indigo-500"
+                                />
+                            </svg>
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-white">75%</div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white text-center mb-2 font-['Space_Grotesk']">Resource Usage</h3>
+                    <p class="text-gray-300 text-center font-['Inter']">System optimization</p>
+                </div>
+            </div>
+
+            <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-700 animate__animated animate__fadeInUp">
+                <h3 class="text-xl font-bold text-white mb-6 font-['Space_Grotesk']">Performance Timeline</h3>
+                <div class="space-y-6">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300 font-['Inter']">Image Processing</span>
+                            <span class="text-white font-['Inter']">0.2s</span>
+                        </div>
+                        <div class="w-full bg-neutral-700 rounded-full h-2">
+                            <div class="bg-indigo-500 h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300 font-['Inter']">Model Inference</span>
+                            <span class="text-white font-['Inter']">0.3s</span>
+                        </div>
+                        <div class="w-full bg-neutral-700 rounded-full h-2">
+                            <div class="bg-indigo-500 h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300 font-['Inter']">Character Recognition</span>
+                            <span class="text-white font-['Inter']">0.1s</span>
+                        </div>
+                        <div class="w-full bg-neutral-700 rounded-full h-2">
+                            <div class="bg-indigo-500 h-2 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div></element><element id="919e0abc-5fd5-4814-8d63-5a3e7508c74f" data-section-id="919e0abc-5fd5-4814-8d63-5a3e7508c74f">
+
+<div id="root">
+    <section id="faq" class="bg-neutral-900 py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold text-white mb-4 font-['Space_Grotesk']">Frequently Asked Questions</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto font-['Inter']">Common questions about our AI license plate recognition system</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-neutral-800 rounded-xl border border-neutral-700 overflow-hidden animate__animated animate__fadeInUp">
+                    <button class="faq-toggle w-full px-6 py-4 flex items-center justify-between text-left">
+                        <span class="text-white font-bold font-['Space_Grotesk']">How accurate are the AI models?</span>
+                        <svg class="w-6 h-6 text-indigo-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-300 font-['Inter']">Our AI models achieve over 98% accuracy in optimal conditions and maintain 95%+ accuracy in challenging scenarios like low light or partial occlusion.</p>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-800 rounded-xl border border-neutral-700 overflow-hidden animate__animated animate__fadeInUp">
+                    <button class="faq-toggle w-full px-6 py-4 flex items-center justify-between text-left">
+                        <span class="text-white font-bold font-['Space_Grotesk']">What image formats are supported?</span>
+                        <svg class="w-6 h-6 text-indigo-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-300 font-['Inter']">We support all common image formats including JPG, PNG, WEBP, and BMP. Maximum file size is 10MB per image.</p>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-800 rounded-xl border border-neutral-700 overflow-hidden animate__animated animate__fadeInUp">
+                    <button class="faq-toggle w-full px-6 py-4 flex items-center justify-between text-left">
+                        <span class="text-white font-bold font-['Space_Grotesk']">How fast is the processing time?</span>
+                        <svg class="w-6 h-6 text-indigo-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-300 font-['Inter']">Average processing time is 0.3-0.5 seconds per image, including preprocessing and analysis by both models.</p>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-800 rounded-xl border border-neutral-700 overflow-hidden animate__animated animate__fadeInUp">
+                    <button class="faq-toggle w-full px-6 py-4 flex items-center justify-between text-left">
+                        <span class="text-white font-bold font-['Space_Grotesk']">What preprocessing is applied to images?</span>
+                        <svg class="w-6 h-6 text-indigo-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-300 font-['Inter']">Images undergo automatic enhancement, including contrast adjustment, perspective correction, and noise reduction for optimal recognition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const arrow = button.querySelector('svg');
+                
+                // Toggle content
+                content.classList.toggle('hidden');
+                
+                // Rotate arrow
+                if (content.classList.contains('hidden')) {
+                    arrow.style.transform = 'rotate(0deg)';
+                } else {
+                    arrow.style.transform = 'rotate(180deg)';
+                }
+                
+                // Close other FAQs
+                document.querySelectorAll('.faq-content').forEach(otherContent => {
+                    if (otherContent !== content && !otherContent.classList.contains('hidden')) {
+                        otherContent.classList.add('hidden');
+                        otherContent.previousElementSibling.querySelector('svg').style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</div></element><element id="ed591690-c679-4c0f-b8e2-7400c6ad5c04" data-section-id="ed591690-c679-4c0f-b8e2-7400c6ad5c04">
+
+<div id="root">
+    <section id="contact" class="bg-neutral-800 py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-4xl font-bold text-white mb-4 font-['Space_Grotesk']">Get in Touch</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto font-['Inter']">Have questions about our AI models? We're here to help.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="space-y-8 animate__animated animate__fadeInLeft">
+                    <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-700">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-indigo-500/10 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold mb-1 font-['Space_Grotesk']">Email Us</h3>
+                                <p class="text-gray-300 font-['Inter']">support@plateai.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-700">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-indigo-500/10 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold mb-1 font-['Space_Grotesk']">Location</h3>
+                                <p class="text-gray-300 font-['Inter']">San Francisco, CA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="bg-neutral-900 p-8 rounded-xl border border-neutral-700 animate__animated animate__fadeInRight">
+                    <div class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-white mb-2 font-['Space_Grotesk']">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:border-indigo-500 focus:outline-none transition-colors font-['Inter']" />
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-white mb-2 font-['Space_Grotesk']">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:border-indigo-500 focus:outline-none transition-colors font-['Inter']" />
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-white mb-2 font-['Space_Grotesk']">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:border-indigo-500 focus:outline-none transition-colors font-['Inter']"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition-colors duration-300 font-['Inter']">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Add form submission logic here
+            const formData = new FormData(form);
+            console.log('Form submitted:', Object.fromEntries(formData));
+            form.reset();
+        });
+    </script>
+</div></element><element id="5f8ba7d6-b0b5-4ac1-b69c-ce49dbcfbbfe" data-section-id="5f8ba7d6-b0b5-4ac1-b69c-ce49dbcfbbfe">
+
+<div id="root">
+    <footer id="footer" class="bg-neutral-900 py-12 border-t border-neutral-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-white font-['Space_Grotesk']">PlateAI Compare</h3>
+                    <p class="text-gray-400 font-['Inter']">Advanced license plate recognition powered by dual AI models</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-500 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.627-5.373-12-12-12"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 font-['Space_Grotesk']">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="/" class="text-gray-400 hover:text-indigo-500 transition-colors font-['Inter']">Home</a>
+                        </li>
+                        <li>
+                            <a href="#features" class="text-gray-400 hover:text-indigo-500 transition-colors font-['Inter']">Features</a>
+                        </li>
+                        <li>
+                            <a href="#demo" class="text-gray-400 hover:text-indigo-500 transition-colors font-['Inter']">Demo</a>
+                        </li>
+                        <li>
+                            <a href="#comparison" class="text-gray-400 hover:text-indigo-500 transition-colors font-['Inter']">Comparison</a>
+                        </li>
+                        <li>
+                            <a href="#technical" class="text-gray-400 hover:text-indigo-500 transition-colors font-['Inter']">Technical</a>
+                        </li>
+                        <li>
+                            <a href="#performance" class="text-gray-400 hover:text-indigo-500 transition-colors font-['Inter']">Performance</a>
+                        </li>
+                        <li>
+                            <a href="#faq" class="text-gray-400 hover:text-indigo-500 transition-colors font-['Inter']">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="text-gray-400 hover:text-indigo-500 transition-colors font-['Inter']">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 font-['Space_Grotesk']">Legal</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="/privacy" class="text-gray-400 hover:text-indigo-500 transition-colors font-['Inter']">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="/terms" class="text-gray-400 hover:text-indigo-500 transition-colors font-['Inter']">Terms of Service</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="text-gray-400 hover:text-indigo-500 transition-colors font-['Inter']">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#faq" class="text-gray-400 hover:text-indigo-500 transition-colors font-['Inter']">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 font-['Space_Grotesk']">Newsletter</h4>
+                    <p class="text-gray-400 mb-4 font-['Inter']">Stay updated with our latest developments</p>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:border-indigo-500 focus:outline-none transition-colors font-['Inter']">
+                        <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-300 font-['Inter']">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-neutral-800 pt-8">
+                <p class="text-center text-gray-400 font-['Inter']">&copy; 2024 PlateAI Compare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const newsletterForm = document.querySelector('footer form');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            console.log('Newsletter subscription:', email);
+            e.target.reset();
+        });
+    </script>
+</div></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
