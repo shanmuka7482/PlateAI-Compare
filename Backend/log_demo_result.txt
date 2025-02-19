@@ -30,3 +30,11 @@ C:\Users\shanm\AppData\Local\Temp\tmpof34g1gl\image.png	~HR26DK8337             
 image_path               	predicted_labels         	confidence score
 --------------------------------------------------------------------------------
 C:\Users\shanm\AppData\Local\Temp\tmpi9sw81ye\image.png	~HR26DK8337              	0.1565
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+C:\Users\shanm\AppData\Local\Temp\tmp8t_ibuy_\image.png	~HR26DK8337              	0.1565
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+C:\Users\shanm\AppData\Local\Temp\tmpbfxtvveb\image.png	~HR26DK8337              	0.1565

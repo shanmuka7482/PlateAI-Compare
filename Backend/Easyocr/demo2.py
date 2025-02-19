@@ -1,7 +1,10 @@
 import string
 import torch
 import os
-
+import tempfile
+import zipfile
+import dotenv
+import time
 import torch.backends.cudnn as cudnn
 import torch.nn.functional as F
 import torch.utils.data
@@ -31,27 +34,59 @@ class Config:
     num_fiducial = 20
     output_channel = 512
     rgb = False
-    base_dir = os.path.dirname(os.path.abspath(__file__))  # Get the current script directory
-    saved_model = os.path.join(base_dir, "saved_models", "TPS-ResNet-BiLSTM-Attn-Seed1111", "best_accuracy.pth")
     sensitive = True
     workers = 4
+    saved_model = ""
+
 
 def inference(image_path):
     """Inference function for EasyOCR."""
 
+    # Load environment variables from .env file
+    dotenv.load_dotenv()
+    
+    # Create a temporary directory
+    temp_dir = tempfile.mkdtemp()
+    model_dir = os.path.join(temp_dir, "saved_models", "TPS-ResNet-BiLSTM-Attn-Seed1111")
+    os.makedirs(model_dir, exist_ok=True)
+
+    # Google Drive file ID (replace this with your actual file ID)
+    google_drive_file_id = os.getenv("model_drive_id")
+
+    # File paths
+    saved_model = os.path.join(model_dir, "best_accuracy.pth")
+
+    # Download the model if it doesn't exist
+    if not os.path.exists(saved_model):
+        print("Downloading model from Google Drive...")
+        gdown.download(f"https://drive.google.com/uc?id={google_drive_file_id}", saved_model, quiet=False)
+
+
+        # Ensure extracted model file is in the expected location
+        if not os.path.exists(saved_model):
+            print(f"Error: Model file not found at {saved_model}")
+        else:
+            print("Model successfully extracted.")
+
+    print(f"Model path: {saved_model}")
 
 
     # Convert Config class to Namespace (so it behaves like argparse output)
     opt = Config()
+    opt.saved_model = saved_model
     opt.image_folder = image_path
     
     # Enable CUDNN settings for performance
     cudnn.benchmark = True
     cudnn.deterministic = True
     opt.num_gpu = torch.cuda.device_count()
-    results = demo(opt)
-    print(results)
-    return results
+    
+    start_time = time.time()
+    Image,confidence = demo(opt)
+    end_time = time.time()
+    execution_time = end_time - start_time
+    # print(results)
+    return Image,confidence,execution_time
 
 
 def demo(opt):

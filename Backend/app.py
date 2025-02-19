@@ -82,7 +82,7 @@ def model2_ocr():
 
         image = decode_image(encoded_image)
         temp_path = save_temp_folder_image(image)
-        Extracted_Image,confidense_score, execution_time = measure_time(Easyocr_inference, temp_path)
+        Extracted_Image,confidense_score, execution_time = Easyocr_inference(temp_path)
         shutil.rmtree(temp_path)
         return jsonify({"extracted_text": Extracted_Image,"Confidense_score":confidense_score,"Execution time":execution_time }), 200
     except Exception as e:
