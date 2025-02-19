@@ -1,0 +1,102 @@
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	up53dv9006               	0.1262
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.02.42_ecf87446.jpg	4729:FC                  	0.6174
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.04.26_6e476698.jpg	J6-0928                  	0.4681
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.07.23_177b5f61.jpg	~HR26DK8337              	0.1521
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	up53dv9006               	0.1262
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.02.42_ecf87446.jpg	4729:FC                  	0.6174
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.04.26_6e476698.jpg	J6-0928                  	0.4681
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.07.23_177b5f61.jpg	~HR26DK8337              	0.1565
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	up53dv9006               	0.1262
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.02.42_ecf87446.jpg	4729:FC                  	0.6174
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.04.26_6e476698.jpg	J6-0928                  	0.4681
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.07.23_177b5f61.jpg	~HR26DK8337              	0.1565
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	up53dv9006               	0.1262
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.02.42_ecf87446.jpg	4729:FC                  	0.6174
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.04.26_6e476698.jpg	J6-0928                  	0.4681
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.07.23_177b5f61.jpg	~HR26DK8337              	0.1565
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	up53dv9006               	0.1262
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.02.42_ecf87446.jpg	4729:FC                  	0.6174
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.04.26_6e476698.jpg	J6-0928                  	0.4681
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.07.23_177b5f61.jpg	~HR26DK8337              	0.1565
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	SSSSSSSSSSSSSSSSSSSSSSSSS	0.0000
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.02.42_ecf87446.jpg	SSSSSSSSSSSSSSSSSSSSSSSSS	0.0000
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.04.26_6e476698.jpg	SSSSSSSSSSSSSSSSSSSSSSSSS	0.0000
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.07.23_177b5f61.jpg	SSSSSSSSSSSSSSSSSSSSSSSSS	0.0000
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	up53dv9006               	0.1262
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.02.42_ecf87446.jpg	4729:FC                  	0.6174
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.04.26_6e476698.jpg	J6-0928                  	0.4681
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.07.23_177b5f61.jpg	~HR26DK8337              	0.1565
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	up53dv9006               	0.1262
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.02.42_ecf87446.jpg	4729:FC                  	0.6174
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.04.26_6e476698.jpg	J6-0928                  	0.4681
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.07.23_177b5f61.jpg	~HR26DK8337              	0.1565
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	up53dv9006               	0.1262
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.02.42_ecf87446.jpg	4729:FC                  	0.6174
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.04.26_6e476698.jpg	J6-0928                  	0.4681
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.07.23_177b5f61.jpg	~HR26DK8337              	0.1565
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	up53dv9006               	0.1262
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.02.42_ecf87446.jpg	4729:FC                  	0.6174
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.04.26_6e476698.jpg	J6-0928                  	0.4681
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.07.23_177b5f61.jpg	~HR26DK8337              	0.1565
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	up53dv9006               	0.1262
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.02.42_ecf87446.jpg	4729:FC                  	0.6174
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.04.26_6e476698.jpg	J6-0928                  	0.4681
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.07.23_177b5f61.jpg	~HR26DK8337              	0.1565
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	up53dv9006               	0.1262
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.02.42_ecf87446.jpg	4729:FC                  	0.6174
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.04.26_6e476698.jpg	J6-0928                  	0.4681
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.07.23_177b5f61.jpg	~HR26DK8337              	0.1565
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	up53dv9006               	0.1262
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	up53dv9006               	0.1262
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.02.42_ecf87446.jpg	4729:FC                  	0.6174
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.04.26_6e476698.jpg	J6-0928                  	0.4681
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.07.23_177b5f61.jpg	~HR26DK8337              	0.1565
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 19.58.29_61b6313a.jpg	up53dv9006               	0.1262
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.02.42_ecf87446.jpg	4729:FC                  	0.6174
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.04.26_6e476698.jpg	J6-0928                  	0.4681
+D:\Preap\Paper\Project\Model\Test2\Test_image\WhatsApp Image 2025-02-16 at 20.07.23_177b5f61.jpg	~HR26DK8337              	0.1565
