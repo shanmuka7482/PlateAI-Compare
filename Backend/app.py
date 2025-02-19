@@ -45,13 +45,6 @@ def save_temp_folder_image(image):
 
     return temp_folder  # Return the temporary folder path
 
-def measure_time(func, *args, **kwargs):
-    start_time = time.time()
-    Extracted_Image,confidense_score = func(*args, **kwargs)
-    end_time = time.time()
-    execution_time = end_time - start_time
-    return Extracted_Image,confidense_score, execution_time
-
 @app.route("/Paddleocr_inference", methods=["POST"])
 def model1_ocr():
     """Endpoint for Model 1 to extract text from an image."""
@@ -63,7 +56,7 @@ def model1_ocr():
 
         image = decode_image(encoded_image)
         temp_path = save_temp_image(image)
-        Extracted_Image,confidense_score, execution_time = measure_time(Paddleocr_inference, temp_path)
+        Extracted_Image,confidense_score, execution_time = Paddleocr_inference(temp_path)
         os.remove(temp_path)  # Clean up the temporary file
 
         return jsonify({"extracted_text": Extracted_Image,"Confidense_score":confidense_score,"Execution time":execution_time }), 200

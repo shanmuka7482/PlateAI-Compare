@@ -8,6 +8,7 @@ import time
 import torch.backends.cudnn as cudnn
 import torch.nn.functional as F
 import torch.utils.data
+import gdown
 
 from Easyocr.dataset import AlignCollate, RawDataset
 from Easyocr.model import Model

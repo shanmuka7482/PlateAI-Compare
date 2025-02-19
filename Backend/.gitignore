@@ -1,3 +1,4 @@
-.env
+.venv
 Easyocr/saved_models/*
 PaddleOCR/.venv/*
+.gitignore
